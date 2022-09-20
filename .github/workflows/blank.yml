@@ -7,5 +7,4 @@ jobs:
   docker:
     runs-on: ubuntu-18.04
     steps:
-      - name: Checkout
-        uses: action/checkou@v2
+      - run: echo "hello"
