@@ -26,6 +26,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
+          push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/deploy
           
       - name: Verify
