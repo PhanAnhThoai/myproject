@@ -26,7 +26,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           builder: ${{ step.buildx.outputs.name }}
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/deploy
           
       - name: Verify
         run: echo ${{ steps.docker_build.outputs.digest }} 
