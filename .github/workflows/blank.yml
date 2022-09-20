@@ -1,11 +1,11 @@
-name: hello world
+name: deploy
 on:
 
   push:
     branches: [main]
 jobs:
-  say-hello:
-    runs-on: ubuntu-latest
+  docker:
+    runs-on: ubuntu-20.04
     steps:
-      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-      - run: echo Hello world, today is $TODAY
+      - name: Checkout
+        uses: action/checkou@v2
