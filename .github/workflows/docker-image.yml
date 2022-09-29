@@ -1,0 +1,13 @@
+name: Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: build
+    steps:
+    - name: Test
+      run: |
+        cat ~/NOTE.txt
