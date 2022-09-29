@@ -10,4 +10,4 @@ jobs:
     steps:
     - name: Test
       run: |
-        cat ~/NOTE.txt
+        cd /home/khanh && docker build -t test-image .
